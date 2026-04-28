@@ -1,6 +1,6 @@
 import json 
 from core.carregar import carregar_mercadorias, carregar_sql
-from care.adicionar import adicionar_produto 
+from core.adicionar import adicionar_produto 
 class Carrinho:
     def __init__(self, codigo, quantidade):
         self.codigo = codigo
