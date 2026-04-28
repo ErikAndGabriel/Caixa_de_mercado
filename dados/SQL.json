@@ -1,0 +1,16 @@
+{
+  "arroz": {
+    "nome": "arroz",
+    "id": 1,
+    "tipo": "comida",
+    "valor": 12.40,
+    "codigo": 1234
+  },
+  "feijão": {
+    "nome": "feijão",
+    "id": 2,
+    "tipo": "comida",
+    "valor": 12.20,
+    "codigo": 1235
+  }
+}
