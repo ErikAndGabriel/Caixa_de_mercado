@@ -16,7 +16,6 @@ O sistema permite:
 
 ✅ Visualizar mercadorias cadastradas
 ✅ Adicionar produtos ao carrinho
-✅ Remover produtos
 ✅ Calcular total da compra
 ✅ Configuração personalizada por JSON
 
@@ -80,10 +79,6 @@ Instale as dependências:
 pip install colorama
 ```
 
----
-
-## ▶️ Como executar
-
 Execute o arquivo principal:
 
 ```bash
@@ -114,7 +109,7 @@ Exemplo:
 
 * Carregar arquivos JSON
 * Adicionar dados
-* Limpar a tela (`apagar.py`)
+* Limpar a tela 
 
 ---
 
