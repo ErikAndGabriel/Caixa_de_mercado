@@ -2,4 +2,6 @@
    "nome_app": "caixa de mercado",
    "moeda": "R$",
    "mostrar_banner": true,
+   "versao": "V1.2",
+   "caminho": "caixa_de_mercado/config/app.json"
 }
