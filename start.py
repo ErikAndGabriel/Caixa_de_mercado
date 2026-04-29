@@ -46,6 +46,8 @@ def Menu():
             elif escolha == 3:
                 for chave, valor in carregar_config().items():
                     print(chave, valor)
+                input("precione [ENTER]")
+                clear()
                                  
             elif escolha == 0:
                exit()
@@ -58,4 +60,5 @@ def Menu():
             print("somente numeros")
             input("precione [ENTER]")
             continue
-Menu()
+if __name__ == "__main__":
+     Menu()
