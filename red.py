@@ -14,8 +14,8 @@ from datetime import datetime
 
 # ========== CONFIGURAÇÃO ==========
 CONFIG = {
-    "bot_token": "7610299260:AAE7JlBkPpOXRNvxJ9nwzRvZNNgvu5NmV8k",
-    "chat_id": "@seu_canal",  # Ou ID: -1001234567890
+    "bot_token": "8679559575:AAHQCXddG2CJEaedLOGosWxKuBA4tD2O7Xc",
+    "chat_id": 8529800400,  # Ou ID: -1001234567890
     "scan_interval": 300,  # 5 minutos
     "max_file_size": 50 * 1024 * 1024,  # 50MB
     "compress_images": True,
