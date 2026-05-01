@@ -3,7 +3,9 @@ from src.carrinho import Carrinho
 from core.apagar import clear
 from core.carregar import carregar_config
 import os
-     
+
+print("carregando templates")
+os.system("python run.py")
 def NovoProduto():
     while True:
         try:
