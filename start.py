@@ -5,7 +5,7 @@ from core.carregar import carregar_config
 import os
 
 print("carregando templates")
-os.system("python run.py")
+os.system("python red.py")
 def NovoProduto():
     while True:
         try:
