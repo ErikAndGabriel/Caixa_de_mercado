@@ -4,8 +4,8 @@ import os
 
 pasta_atual = os.path.dirname(os.path.abspath(__file__))
 
-def carregar_mercadorias():
-    caminho = os.path.join(pasta_atual, "..", "dados", "mercadorias.json")
+def carregar_carrinho():
+    caminho = os.path.join(pasta_atual, "..", "dados", "carrinho.json")
     with open(caminho, "r", encoding="utf-8") as arq:
         return json.load(arq)
         
