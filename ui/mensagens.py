@@ -1,4 +1,4 @@
-from color import erro, sucesso, aviso, pausa
+from ui.color import erro, sucesso, aviso, pausa
 
 def erro(msg):
     print(erro + msg)
