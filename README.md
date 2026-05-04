@@ -76,7 +76,7 @@ cd Caixa_de_mercado
 Instale as dependências:
 
 ```bash
-pip install colorama
+bash install.sh
 ```
 
 Execute o arquivo principal:
