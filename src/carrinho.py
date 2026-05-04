@@ -1,5 +1,5 @@
 import json 
-from core.carregar import carregar_mercadorias, carregar_sql
+from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
 class Carrinho:
     def __init__(self, codigo, quantidade):
