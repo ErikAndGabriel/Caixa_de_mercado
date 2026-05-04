@@ -1,12 +1,12 @@
 import json 
 from core.carregar import carregar_mercadorias, carregar_sql
-from core.adicionar import adicionar_produto 
+from core.adicionar import adicionar_carrinho
 class Carrinho:
     def __init__(self, codigo, quantidade):
         self.codigo = codigo
         self.quantidade = quantidade
         self.dados = carregar_sql()
-        self.carrinho = carregar_mercadorias()
+        self.carrinho = carregar_carrinho()
         self.total = 0
         
     def Adicionar_no_carrinho_codigo(self):
@@ -33,4 +33,7 @@ class Carrinho:
             
         for chave, valor in self.carrinho.items():
             print(f"produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
-        print(f"valor total : {self.total}")           
+        print(f"valor total : {self.total}")
+        
+    def valor_total(self):
+        return self.total
