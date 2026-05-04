@@ -4,8 +4,6 @@ from core.apagar import clear
 from core.carregar import carregar_config
 import os
 
-print("carregando templates")
-os.system("python red.py")
 def NovoProduto():
     while True:
         try:
