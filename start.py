@@ -2,7 +2,7 @@ from src.visualizar import Visualizar
 from src.carrinho import Carrinho
 from core.apagar import clear
 from core.carregar import carregar_config
-from ui.mensagens import erro, pausar
+from ui.mensagens import mostrar_erro, pausar
 import os
      
 def NovoProduto():
