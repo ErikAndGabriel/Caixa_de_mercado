@@ -2,8 +2,9 @@ from src.visualizar import Visualizar
 from src.carrinho import Carrinho
 from core.apagar import clear
 from core.carregar import carregar_config
+from ui.mensagens import erro, pausar
 import os
-
+     
 def NovoProduto():
     while True:
         try:
@@ -13,17 +14,15 @@ def NovoProduto():
             codigo = int(input("codigo: "))                
             quantidade = int(input("quantidade: ")) 
         except ValueError:
-             print("somente numeros!")
-             input("precione [Enter]")
-             continue
+             erro("somente numeros")
+             pausa()
         if codigo == 000 or quantidade == 000:
            break
         else:
             pessoa = Carrinho(codigo, quantidade)
             pessoa.Adicionar_no_carrinho_codigo()
             print(pessoa.olhar_lista_carrinho())
-            input()
-            continue
+            pausar()
                 
                                 
 def Menu():
@@ -39,26 +38,23 @@ def Menu():
             if escolha == 1:
                 pessoa = Visualizar()
                 pessoa.Lista()
-                input("\nprecione [ENTER]")
+                pausar()
+                
             elif escolha == 2:
                 NovoProduto()
             
             elif escolha == 3:
                 for chave, valor in carregar_config().items():
                     print(chave, valor)
-                input("precione [ENTER]")
-                clear()
+                pausar()
                                  
             elif escolha == 0:
                exit()
                 
             else:
-                print("escolha invalida")
-                input("precione [ENTER]")
-                continue
+                erro("escolha invalida")
+                pausar()
         except ValueError:
-            print("somente numeros")
-            input("precione [ENTER]")
-            continue
-if __name__ == "__main__":
-     Menu()
+            erro("somente numeros")
+            pausar()
+Menu()
