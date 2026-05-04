@@ -14,7 +14,7 @@ def NovoProduto():
             codigo = int(input("codigo: "))                
             quantidade = int(input("quantidade: ")) 
         except ValueError:
-             erro("somente numeros")
+             mostrar_erro("somente numeros")
              pausa()
         if codigo == 000 or quantidade == 000:
            break
@@ -52,9 +52,9 @@ def Menu():
                exit()
                 
             else:
-                erro("escolha invalida")
+                mostrar_erro("escolha invalida")
                 pausar()
         except ValueError:
-            erro("somente numeros")
+            mostrar_erro("somente numeros")
             pausar()
 Menu()
