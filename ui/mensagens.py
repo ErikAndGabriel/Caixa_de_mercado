@@ -10,5 +10,4 @@ def aviso(msg):
     print(aviso + msg)
     
 def pausar(msg):
-    input(pausa + "precione [ENTER]")  
-    continue    
+    input(pausa + "precione [ENTER]") 
