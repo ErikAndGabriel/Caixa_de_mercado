@@ -47,7 +47,7 @@ def Menu():
                 NovoProduto()
             
             elif escolha == 3:
-                print(tabulat(carregar_config(), headers="keys", tablefmt="grid"))
+                print(tabulate(carregar_config(), headers="keys", tablefmt="grid"))
                 pausar()
                                  
             elif escolha == 0:
