@@ -15,7 +15,7 @@ def NovoProduto():
             quantidade = int(input("quantidade: ")) 
         except ValueError:
              mostrar_erro("somente numeros")
-             pausa()
+             pausar()
         if codigo == 000 or quantidade == 000:
            break
         else:
