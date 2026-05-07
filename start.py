@@ -25,6 +25,8 @@ def NovoProduto():
             pessoa = Carrinho(codigo, quantidade)
             pessoa.Adicionar_no_carrinho_codigo()
             print(pessoa.olhar_lista_carrinho())
+            valor_total += valor_total()
+            print(valor_total)
             pausar()
                 
                                 
