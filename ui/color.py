@@ -6,3 +6,4 @@ erro = Fore.RED
 sucesso = Fore.GREEN
 aviso = Fore.BLUE
 pausa = Fore.YELLOW
+reset = Fore.RESET
