@@ -2,13 +2,15 @@ from src.visualizar import Visualizar
 from src.carrinho import Carrinho
 from core.apagar import clear
 from core.carregar import carregar_config
-from ui.mensagens import mostrar_erro, pausar, reset
+from ui.mensagens import mostrar_erro, pausar, reset_color
+from tabulate import tabulate
 import os
      
 def NovoProduto():
     while True:
         try:
             clear()
+            reset_color()
             print("""
             Atenção, adicionar codigo em seguida  quantidade, para sair do programa e so digitar 000""")
             codigo = int(input("codigo: "))                
@@ -29,6 +31,7 @@ def Menu():
     while True:
         try:
             clear()
+            reset_color()
             print("[1] olhar produtos")
             print("[2] nova compra")
             print("[3] info")
@@ -44,8 +47,7 @@ def Menu():
                 NovoProduto()
             
             elif escolha == 3:
-                for chave, valor in carregar_config().items():
-                    print(chave, valor)
+                print(tabulat(carregar_config(), headers="keys", tablefmt="grid"))
                 pausar()
                                  
             elif escolha == 0:
