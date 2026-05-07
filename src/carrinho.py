@@ -20,7 +20,7 @@ class Carrinho:
                        "quantidade": self.quantidade,       
                            
                     }
-                    adicionar_produto(self.carrinho)
+                    adicionar_carrinho(self.carrinho)
                     
                     self.total += valor_unitario
                     return "produto adicionado!"
