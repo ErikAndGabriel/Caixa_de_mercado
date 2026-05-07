@@ -7,6 +7,7 @@ from tabulate import tabulate
 import os
      
 def NovoProduto():
+    valor_total = 0
     while True:
         try:
             clear()
