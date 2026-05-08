@@ -23,9 +23,8 @@ def NovoProduto():
            break
         else:
             pessoa = Carrinho(codigo, quantidade)
-            pessoa.Adicionar_no_carrinho_codigo()
+            valor = pessoa.Adicionar_no_carrinho_codigo()
             print(pessoa.olhar_lista_carrinho())
-            valor = valor_total()
             valor_total += valor
             print(valor_total)
             pausar()
@@ -65,4 +64,5 @@ def Menu():
         except ValueError:
             mostrar_erro("somente numeros")
             pausar()
+     
 Menu()
