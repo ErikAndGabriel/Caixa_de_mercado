@@ -1,6 +1,7 @@
 import json 
 from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
+from ui.mensagens import mostrar_erro, mostrar_sucesso 
 
 class Carrinho:
     def __init__(self, codigo, quantidade):
@@ -24,7 +25,7 @@ class Carrinho:
                     adicionar_carrinho(self.carrinho)
                     
                     self.total += valor_unitario
-                    print("produto adicionado!")
+                    mostrar_sucesso("produto adicionado!")
                     return self.total
                     
             return f"o codigo {self.codigo} não esta cadastrado!"
@@ -37,5 +38,6 @@ class Carrinho:
             print(f"produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
         print(f"valor total : {self.total}")
         
-    def valor_total(self):
-        return self.total
+    def resetar_compra(self):
+        dados_padrao = {
+            
