@@ -37,8 +37,9 @@ def NovoProduto():
 def Menu():
     while True:
         try:
-            print(banner)
+            
             clear()
+            print(banner)
             reset_color()
             print("[1] olhar produtos")
             print("[2] nova compra")
