@@ -3,5 +3,7 @@
    "moeda": "R$",
    "mostrar_banner": true,
    "versao": "V1.2",
-   "caminho": "caixa_de_mercado/config/app.json"
+   "caminho": "caixa_de_mercado/config/app.json",
+   "linguagem": "português",
+   "empresa": "senai"
 }
