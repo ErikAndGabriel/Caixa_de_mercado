@@ -1,7 +1,7 @@
 echo "============ Caixa Sistema ===============" 
-apt update 
-apt upgrade 
-apt install python3
+apt update -y
+apt upgrade -y
+apt install python3 -y
 pip install colorama
 pip install tabulate 
 echo "=========== COMPLETO ==============="
