@@ -21,6 +21,8 @@ def NovoProduto():
              pausar()
         if codigo == 000 or quantidade == 000:
            break
+        if codigo == 777 or quantidade == 777:
+            resetar_carrinho()
         else:
             pessoa = Carrinho(codigo, quantidade)
             valor = pessoa.Adicionar_no_carrinho_codigo()
