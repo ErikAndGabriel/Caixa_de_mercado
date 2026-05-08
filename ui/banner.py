@@ -1,4 +1,4 @@
-from color import aviso
+from ui.color import aviso
 from core.carregar import carregar_config 
 
 
