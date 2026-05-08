@@ -22,7 +22,8 @@ def NovoProduto():
         if codigo == 000 or quantidade == 000:
            break
         if codigo == 777 or quantidade == 777:
-            resetar_compra()
+            pessoa = Carrinho(None, None)
+            pessoa.resetar_compra()
         else:
             pessoa = Carrinho(codigo, quantidade)
             valor = pessoa.Adicionar_no_carrinho_codigo()
