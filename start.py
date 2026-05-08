@@ -3,6 +3,7 @@ from src.carrinho import Carrinho
 from core.apagar import clear
 from core.carregar import carregar_config
 from ui.mensagens import mostrar_erro, pausar, reset_color
+from ui.banner import banner
 from tabulate import tabulate
 import os
      
@@ -36,6 +37,7 @@ def NovoProduto():
 def Menu():
     while True:
         try:
+            print(banner)
             clear()
             reset_color()
             print("[1] olhar produtos")
