@@ -1,6 +1,7 @@
 import json 
 from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
+
 class Carrinho:
     def __init__(self, codigo, quantidade):
         self.codigo = codigo
@@ -23,7 +24,8 @@ class Carrinho:
                     adicionar_carrinho(self.carrinho)
                     
                     self.total += valor_unitario
-                    return "produto adicionado!"
+                    print("produto adicionado!")
+                    return self.total
                     
             return f"o codigo {self.codigo} não esta cadastrado!"
          
