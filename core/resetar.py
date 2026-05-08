@@ -1,4 +1,5 @@
 import json 
+import os
 
 pasta_atual = os.path.dirname(os.path.abspath(__file__))
 
