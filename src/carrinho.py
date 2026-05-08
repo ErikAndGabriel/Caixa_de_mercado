@@ -1,6 +1,7 @@
 import json 
 from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
+from core.resetar import resetar_carrinho
 from ui.mensagens import mostrar_erro, mostrar_sucesso 
 
 class Carrinho:
@@ -39,5 +40,5 @@ class Carrinho:
         print(f"valor total : {self.total}")
         
     def resetar_compra(self):
-        dados_padrao = {
+        resetar_carrinho()        
             
