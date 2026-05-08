@@ -37,7 +37,7 @@ class Carrinho:
             
         for chave, valor in self.carrinho.items():
             print(f"produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
-        print(f"valor total : {self.total}")
+        
         
     def resetar_compra(self):
         resetar_carrinho()        
