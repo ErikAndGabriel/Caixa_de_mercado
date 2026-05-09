@@ -25,6 +25,7 @@ def NovoProduto():
         if codigo == 777 or quantidade == 777:
             pessoa = Carrinho(None, None)
             pessoa.resetar_compra()
+            valor_total = 0
         else:
             pessoa = Carrinho(codigo, quantidade)
             valor = pessoa.Adicionar_no_carrinho_codigo()
