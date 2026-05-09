@@ -20,6 +20,7 @@ def NovoProduto():
         except ValueError:
              mostrar_erro("somente numeros")
              pausar()
+             continue
         if codigo == 000 or quantidade == 000:
            break
         if codigo == 777 or quantidade == 777:
