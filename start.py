@@ -34,6 +34,7 @@ def NovoProduto():
             valor_total += valor
             print(valor_total)
             pausar()
+            continue
                 
                                 
 def Menu():
@@ -53,7 +54,7 @@ def Menu():
                 pessoa = Visualizar()
                 pessoa.Lista()
                 pausar()
-                
+                continue                 
             elif escolha == 2:
                 NovoProduto()
             
@@ -62,15 +63,17 @@ def Menu():
                 config_lista = [config]
                 print(tabulate(config_lista, headers="keys", tablefmt="grid"))
                 pausar()
-                                 
+                continue                                  
             elif escolha == 0:
                exit()
                 
             else:
                 mostrar_erro("escolha invalida")
                 pausar()
+                continue 
         except ValueError:
             mostrar_erro("somente numeros")
             pausar()
+            continue 
      
 Menu()
