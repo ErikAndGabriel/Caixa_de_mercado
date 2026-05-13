@@ -14,7 +14,8 @@ def NovoProduto():
             clear()
             reset_color()
             print("""
-            Atenção, adicionar codigo em seguida  quantidade, para sair do programa e so digitar 000""")
+            Atenção, adicionar codigo em seguida  quantidade, para sair do programa e so digitar 000,
+            777 para produto e quantidade para resetar compra""")
             codigo = int(input("codigo: "))                
             quantidade = int(input("quantidade: ")) 
         except ValueError:
