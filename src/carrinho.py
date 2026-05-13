@@ -16,7 +16,8 @@ class Carrinho:
             for chave, valor in self.dados.items():                  
                 if self.codigo == valor['codigo']:
                     valor_unitario = valor['valor'] * self.quantidade
-                    codigo = [int(dados) for chaves in produtos.keys()]
+                    
+                    codigo = [int(self.carrinho) for chaves in produtos.keys()]
                     enumerate = max(codigo) + 1
                     self.carrinho[enumerate] = {
                     
