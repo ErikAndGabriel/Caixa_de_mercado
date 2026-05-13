@@ -18,7 +18,7 @@ class Carrinho:
                     valor_unitario = valor['valor'] * self.quantidade
 
                     if self.carrinho:
-                        proximo_id = max(int(k) for k in self.carrinho.keys()) + 1
+                        proximo_id = max(int(penis) for penis in self.carrinho.keys()) + 1
                     else:
                         proximo_id = 1
                         
