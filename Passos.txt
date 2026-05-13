@@ -1,0 +1,3 @@
+e importante adicionar login e cadastro para questões administrativas 
+da aplicação, ex administradores vão ter mais funções ex: olhar produtos remover e adicionar
+arquivo json q armazena promoção ex promoção.json 
