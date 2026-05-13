@@ -60,7 +60,11 @@ def Menu():
             
             elif escolha == 3:
                 config = carregar_config()
-                config_lista = [config]
+                config_lista = [{
+                     "config": c,
+                     "atual": v,
+                     } for k in v config.items()]
+                              
                 print(tabulate(config_lista, headers="keys", tablefmt="grid"))
                 pausar()
                 continue                                  
