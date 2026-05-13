@@ -63,7 +63,7 @@ def Menu():
                 config_lista = [{
                      "config": c,
                      "atual": v,
-                     } for k in v config.items()]
+                     } for k, v in config.items()]
                               
                 print(tabulate(config_lista, headers="keys", tablefmt="grid"))
                 pausar()
