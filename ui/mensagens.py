@@ -13,4 +13,4 @@ def pausar():
     input(pausa + "precione [ENTER]")
 
 def reset_color():
-    return reset
+    print(reset)
