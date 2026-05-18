@@ -16,26 +16,26 @@ def NovoProduto():
             print("""
             Atenção, adicionar codigo em seguida  quantidade, para sair do programa e so digitar 000,
             777 para produto e quantidade para resetar compra""")
-            codigo = int(input("codigo: "))                
+            codigo = int(input("codigo: "))
+            if codigo == 000 or quantidade == 000:
+               break
+            if codigo == 777 or quantidade == 777:
+               pessoa = Carrinho(None, None)
+               pessoa.resetar_compra()
+               valor_total = 0
             quantidade = int(input("quantidade: ")) 
         except ValueError:
              mostrar_erro("somente numeros")
              pausar()
              continue
-        if codigo == 000 or quantidade == 000:
-           break
-        if codigo == 777 or quantidade == 777:
-            pessoa = Carrinho(None, None)
-            pessoa.resetar_compra()
-            valor_total = 0
-        else:
-            pessoa = Carrinho(codigo, quantidade)
-            valor = pessoa.Adicionar_no_carrinho_codigo()
-            print(pessoa.olhar_lista_carrinho())
-            valor_total += valor
-            print(valor_total)
-            pausar()
-            continue
+     
+        pessoa = Carrinho(codigo, quantidade)
+        valor = pessoa.Adicionar_no_carrinho_codigo()
+        print(pessoa.olhar_lista_carrinho())
+        valor_total += valor
+        print(valor_total)
+        pausar()
+        continue
                 
                                 
 def Menu():
