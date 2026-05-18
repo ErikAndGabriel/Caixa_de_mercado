@@ -135,6 +135,49 @@ Exemplo:
 
 ---
 
+---
+
+## 📸 Screenshots
+
+### 🏠 Menu principal
+
+<p align="center">
+  <img src="FOTOS/IMG_20260517_233023_165.jpg" width="700">
+</p>
+
+Tela inicial do sistema com as opções principais.
+
+---
+
+### ⚙️ Informações do sistema
+
+<p align="center">
+  <img src="FOTOS/IMG_20260517_233115_603.jpg" width="700">
+</p>
+
+Visualização das configurações do sistema como moeda, idioma e informações gerais.
+
+---
+
+### 🛒 Teste de compra
+
+<p align="center">
+  <img src="FOTOS/IMG_20260517_233121_024.jpg" width="700">
+</p>
+
+Área para adicionar código do produto e quantidade desejada.
+
+---
+
+### 📦 Produtos disponíveis
+
+<p align="center">
+  <img src="FOTOS/IMG_20260517_233127_445.jpg" width="700">
+</p>
+
+Lista de mercadorias cadastradas e seus respectivos códigos.
+
+---
 ## 🎯 Objetivo do projeto
 
 Este projeto foi criado para aprendizado e prática em:
