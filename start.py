@@ -9,6 +9,7 @@ import os
      
 def NovoProduto():
     valor_total = 0
+    carrinho = Carrinho(None, None)
     while True:
         try:
             clear()
@@ -20,8 +21,7 @@ def NovoProduto():
             if codigo == 000:
                break
             if codigo == 777:
-               pessoa = Carrinho(None, None)
-               pessoa.resetar_compra()
+               carrinho.resetar_compra()
                valor_total = 0
             quantidade = int(input("quantidade: ")) 
         except ValueError:
@@ -29,9 +29,8 @@ def NovoProduto():
              pausar()
              continue
      
-        pessoa = Carrinho(codigo, quantidade)
-        valor = pessoa.Adicionar_no_carrinho_codigo()
-        print(pessoa.olhar_lista_carrinho())
+        valor = carrinho.Adicionar_no_carrinho_codigo(codigo, quantidade)
+        print(carrinho.olhar_lista_carrinho())
         valor_total += valor
         print(valor_total)
         pausar()
