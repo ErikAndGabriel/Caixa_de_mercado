@@ -28,8 +28,9 @@ def NovoProduto():
              mostrar_erro("somente numeros")
              pausar()
              continue
-     
-        valor = carrinho.Adicionar_no_carrinho_codigo(codigo, quantidade)
+
+        pessoa = Carrinho(codigo, quantidade)
+        valor = pessoa.Adicionar_no_carrinho_codigo(codigo, quantidade)
         print(carrinho.olhar_lista_carrinho())
         valor_total += valor
         print(valor_total)
