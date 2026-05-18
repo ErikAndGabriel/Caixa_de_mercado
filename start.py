@@ -17,9 +17,9 @@ def NovoProduto():
             Atenção, adicionar codigo em seguida  quantidade, para sair do programa e so digitar 000,
             777 para produto e quantidade para resetar compra""")
             codigo = int(input("codigo: "))
-            if codigo == 000 or quantidade == 000:
+            if codigo == 000:
                break
-            if codigo == 777 or quantidade == 777:
+            if codigo == 777:
                pessoa = Carrinho(None, None)
                pessoa.resetar_compra()
                valor_total = 0
