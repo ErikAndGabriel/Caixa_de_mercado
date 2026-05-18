@@ -30,7 +30,7 @@ def NovoProduto():
              continue
 
         pessoa = Carrinho(codigo, quantidade)
-        valor = pessoa.Adicionar_no_carrinho_codigo(codigo, quantidade)
+        valor = pessoa.Adicionar_no_carrinho_codigo()
         print(carrinho.olhar_lista_carrinho())
         valor_total += valor
         print(valor_total)
