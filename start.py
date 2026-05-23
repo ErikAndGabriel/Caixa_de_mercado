@@ -9,6 +9,7 @@ import os
      
 def NovoProduto():
     valor_total = 0
+    reset = Carrinho(None, None) 
     while True:
         try:
             clear()
@@ -18,9 +19,10 @@ def NovoProduto():
             777 para produto e quantidade para resetar compra""")
             codigo = int(input("codigo: "))
             if codigo == 000:
+               reset.resetar_compra()
                break
-            if codigo == 777:
-               reset = Carrinho(None, None)   
+               
+            if codigo == 777:  
                reset.resetar_compra()
                valor_total = 0
                continue
