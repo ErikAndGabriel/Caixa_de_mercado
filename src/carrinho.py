@@ -2,6 +2,7 @@ import json
 from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
 from core.resetar import resetar_carrinho
+from core.remover import remover_produto 
 from ui.mensagens import mostrar_erro, mostrar_sucesso 
 
 class Carrinho:
@@ -46,8 +47,17 @@ class Carrinho:
         
         
     def resetar_compra(self):
-        resetar_carrinho()        
-    def cancelar_um_produto(self):
+        resetar_carrinho()  
+        
+    def cancelar_um_produto(self, id):
+        remover_produto(id)
+        data = self.dados
+        for i in data.values():
+            if i == id:
+                self.total += i['valor']
+            else:
+                return "produto não adicionado"
+        return self.total
         
     def obter_dados(self):
         return self.dados
