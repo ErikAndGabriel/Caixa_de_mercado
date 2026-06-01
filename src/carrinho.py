@@ -47,6 +47,7 @@ class Carrinho:
         
     def resetar_compra(self):
         resetar_carrinho()        
-            
+    def cancelar_um_produto(self):
+        
     def obter_dados(self):
         return self.dados
