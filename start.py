@@ -21,6 +21,7 @@ def NovoProduto():
             
             if codigo == 000:
                 while True:
+                    clear()
                     try:
                         print("[1] resetar compra")
                         print("[2] resetar e sair")
@@ -36,11 +37,12 @@ def NovoProduto():
                             valor_total = 0
                             return  
                         elif escolha == 3:
+                               
                             reset.olhar_lista_carrinho()
                             try:
                                 id_produto = int(input("ID para cancelar: "))
-                            
-                                reset.resetar_compra()  
+                                remover = Carrinho(None, None, id_produto)
+                                remover.cancelar_um_produto()  
                             except ValueError:
                                 mostrar_erro("ID inválido!")
                             break
