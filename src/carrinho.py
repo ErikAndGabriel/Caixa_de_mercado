@@ -27,7 +27,7 @@ class Carrinho:
                        "nome": valor['nome'],
                        "valor": valor_unitario,
                        "quantidade": self.quantidade,
-                       "cancelamento: False,                           
+                       "cancelamento": False,                           
                     }
                     adicionar_carrinho(self.carrinho)
                     
