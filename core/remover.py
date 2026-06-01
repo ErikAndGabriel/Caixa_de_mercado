@@ -3,7 +3,12 @@ import os
 
 pasta_atual = os.path.dirname(os.path.abspath(__file__))
 
-def adicionar_carrinho(dados):
+def remover_produto(id_produto):
     arquivo = os.path.join(pasta_atual, "..", "dados", "carrinho.json")
+    with open(arquivo, "r") as arq:
+        data = json.load(arq)
+    for p in data['id']:
+        if p['id] == id_produto:
+           p['cancelamento'] == True
     with open(arquivo, "w") as arq:
-        json.dump(dados, arq, indent=4)
+        json.dump(data, arq, indent=4)
