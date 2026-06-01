@@ -6,9 +6,10 @@ from core.remover import remover_produto
 from ui.mensagens import mostrar_erro, mostrar_sucesso 
 
 class Carrinho:
-    def __init__(self, codigo, quantidade):
+    def __init__(self, codigo, quantidade, id):
         self.codigo = codigo
         self.quantidade = quantidade
+        self.id = id
         self.dados = carregar_sql()
         self.carrinho = carregar_carrinho()
         self.total = 0
@@ -49,14 +50,14 @@ class Carrinho:
     def resetar_compra(self):
         resetar_carrinho()  
         
-    def cancelar_um_produto(self, id):
-        remover_produto(id)
+    def cancelar_um_produto(self):
         data = self.dados
         for i in data.values():
-            if i == id:
-                self.total += i['valor']
+            if i == self.id:
+                self.total += int(i['valor'])
             else:
                 return "produto não adicionado"
+        remover_produto(self.id)
         return self.total
         
     def obter_dados(self):
