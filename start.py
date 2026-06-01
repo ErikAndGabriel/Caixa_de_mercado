@@ -6,7 +6,7 @@ from ui.mensagens import mostrar_erro, pausar, reset_color
 from ui.banner import banner
 from tabulate import tabulate
 import os
-     
+
 def NovoProduto():
     valor_total = 0
     reset = Carrinho(None, None, None) 
@@ -15,50 +15,66 @@ def NovoProduto():
             clear()
             reset_color()
             print("""
-            Atenção, adicionar codigo em seguida  quantidade, para sair do programa e so digitar 000,
+            Atenção, adicionar codigo em seguida quantidade, para sair do programa e so digitar 000,
             777 para produto e quantidade para resetar compra""")
             codigo = int(input("codigo: "))
+            
             if codigo == 000:
-                 print("[1] resetar compra")
-                 print("[2] resetar e sair")
-                 print("[3] remover produto")
-                 escolha = int(input("escolha: ")
-                 if escolha == 1:
-                    reset.resetar_compra()
-                 elif escolha == 2:
-                      reset.resetar_compra()
-                      break
-                 elif escolha == 3:
-                      reset.olhar_lista_carrinho()
-                      id = int(input("ID para cancelar: ")                      
-                      reset.resetar_compra()
-                 else:
-                     print("escolha invalida")                               
-                      
+                while True:
+                    try:
+                        print("[1] resetar compra")
+                        print("[2] resetar e sair")
+                        print("[3] remover produto")
+                        escolha = int(input("escolha: "))
+                        
+                        if escolha == 1:
+                            reset.resetar_compra()
+                            valor_total = 0
+                            break
+                        elif escolha == 2:
+                            reset.resetar_compra()
+                            valor_total = 0
+                            return  # Sai da função NovoProduto
+                        elif escolha == 3:
+                            reset.olhar_lista_carrinho()
+                            try:
+                                id_produto = int(input("ID para cancelar: "))
+                                # Adicione a lógica para remover o produto específico aqui
+                                reset.resetar_compra()  # Temporário - ajuste conforme necessidade
+                            except ValueError:
+                                mostrar_erro("ID inválido!")
+                            break
+                        else:
+                            print("escolha invalida")
+                            pausar()
+                    except ValueError:
+                        mostrar_erro("somente numeros")
+                        pausar()
+                continue
                       
             if codigo == 777:  
-               reset.resetar_compra()
-               valor_total = 0
-               continue
+                reset.resetar_compra()
+                valor_total = 0
+                continue
+                
             quantidade = int(input("quantidade: ")) 
             carrinho = Carrinho(codigo, quantidade, None)
+            
         except ValueError:
-             mostrar_erro("somente numeros")
-             pausar()
-             continue
+            mostrar_erro("somente numeros")
+            pausar()
+            continue
 
         valor = carrinho.Adicionar_no_carrinho_codigo()
         carrinho.olhar_lista_carrinho()
         valor_total += valor
-        print(valor_total)
+        print(f"Valor total: R$ {valor_total:.2f}")
         pausar()
         continue
                 
-                                
 def Menu():
     while True:
         try:
-            
             clear()
             print(banner)
             reset_color()
@@ -75,22 +91,19 @@ def Menu():
                 continue                 
             elif escolha == 2:
                 NovoProduto()
-            
             elif escolha == 3:
                 config = carregar_config()
                 config_lista = []
                 for chave, valor in config.items():
-                     config_lista.append({
-                          "config": chave,
-                          "atual": valor,
-                     })
-                              
+                    config_lista.append({
+                        "config": chave,
+                        "atual": valor,
+                    })
                 print(tabulate(config_lista, headers="keys", tablefmt="grid"))
                 pausar()
                 continue                                  
             elif escolha == 0:
-               exit()
-                
+                exit()
             else:
                 mostrar_erro("escolha invalida")
                 pausar()
@@ -100,4 +113,5 @@ def Menu():
             pausar()
             continue 
      
-Menu()
+if __name__ == "__main__":
+    Menu()
