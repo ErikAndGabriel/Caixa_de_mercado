@@ -34,13 +34,13 @@ def NovoProduto():
                         elif escolha == 2:
                             reset.resetar_compra()
                             valor_total = 0
-                            return  # Sai da função NovoProduto
+                            return  
                         elif escolha == 3:
                             reset.olhar_lista_carrinho()
                             try:
                                 id_produto = int(input("ID para cancelar: "))
-                                # Adicione a lógica para remover o produto específico aqui
-                                reset.resetar_compra()  # Temporário - ajuste conforme necessidade
+                            
+                                reset.resetar_compra()  
                             except ValueError:
                                 mostrar_erro("ID inválido!")
                             break
