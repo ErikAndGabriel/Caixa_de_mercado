@@ -195,4 +195,4 @@ Desenvolvido por **Erik**
 
 GitHub: https://github.com/ErikAndGabriel
 
-grupo telegram: 
+grupo telegram: https://t.me/+MlLevuX4HXs4NzUx
