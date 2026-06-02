@@ -1,23 +1,29 @@
-Caixa de Mercado 🛒
+# Caixa de Mercado 🛒
 
 Sistema simples de caixa de mercado feito em Python para registrar compras, visualizar produtos e calcular totais.
 
-📌 Sobre o projeto
+## 📌 Sobre o projeto
 
-O Caixa de Mercado é um projeto desenvolvido para praticar conceitos fundamentais de programação em Python, incluindo organização modular, manipulação de arquivos JSON, orientação a objetos e interface de terminal.
+O **Caixa de Mercado** é um projeto feito para praticar:
+
+* Organização de código em módulos;
+* Manipulação de arquivos JSON;
+* Estruturação de projetos Python;
+* Uso de classes;
+* Interface em terminal.
 
 O sistema permite:
 
 ✅ Visualizar mercadorias cadastradas
 ✅ Adicionar produtos ao carrinho
-✅ Calcular o total da compra
+✅ Calcular total da compra
 ✅ Configuração personalizada por JSON
-✅ Interface personalizada com banners e mensagens estilizadas
 
 ---
 
-📂 Estrutura do projeto
+## 📂 Estrutura do projeto
 
+```bash
 Caixa_de_mercado/
 │
 ├── config/
@@ -39,168 +45,153 @@ Caixa_de_mercado/
 │   ├── carrinho.py
 │   └── visualizar.py
 │
-├── ui/
-│   ├── banner.py
-│   └── mensagens.py
-│
 ├── README.md
 └── start.py
+```
 
 ---
 
-⚙️ Tecnologias utilizadas
+## ⚙️ Tecnologias usadas
 
-- Python 3
-- JSON
-- Colorama
-- Tabulate
+* Python 3
+* JSON
+* Colorama
 
 ---
 
-📥 Instalação
+## 📥 Instalação
 
 Clone o repositório:
 
+```bash
 git clone https://github.com/ErikAndGabriel/Caixa_de_mercado.git
+```
 
-Acesse a pasta:
+Entre na pasta:
 
+```bash
 cd Caixa_de_mercado
+```
 
 Instale as dependências:
 
+```bash
 bash install.sh
+```
 
-Execute o sistema:
+Execute o arquivo principal:
 
+```bash
 python start.py
+```
 
 ---
 
-📁 Explicação das pastas
+## 📁 Explicação das pastas
 
-"config/"
+### `config/`
 
-Armazena configurações gerais do sistema.
+Armazena configurações do sistema.
 
-Exemplos:
+Exemplo:
 
-- Nome da aplicação
-- Moeda utilizada
-- Configurações visuais
-
----
-
-"core/"
-
-Funções auxiliares responsáveis por operações internas.
-
-Exemplos:
-
-- Carregamento de arquivos JSON
-- Adição de registros
-- Limpeza da tela
-- Utilitários do sistema
+* Nome do app
+* Moeda
+* Exibir banner
 
 ---
 
-"dados/"
+### `core/`
 
-Arquivos de armazenamento utilizados pela aplicação.
+Funções auxiliares do sistema.
 
-Exemplos:
+Exemplo:
 
-- Lista de mercadorias
-- Dados temporários do carrinho
-- Banco de dados em JSON
-
----
-
-"src/"
-
-Contém a lógica principal da aplicação.
-
-Exemplos:
-
-- Gerenciamento do carrinho
-- Visualização de produtos
-- Processamento de compras
+* Carregar arquivos JSON
+* Adicionar dados
+* Limpar a tela 
 
 ---
 
-"ui/"
+### `dados/`
 
-Responsável pelos elementos visuais do terminal.
+Arquivos JSON usados pelo sistema.
 
-Exemplos:
+Exemplo:
 
-- Banners personalizados
-- Mensagens de erro
-- Mensagens de sucesso
-- Formatação da interface
+* Produtos cadastrados
+* Banco de dados da compra atual
 
 ---
 
-📸 Screenshots
+### `src/`
 
-🏠 Menu Principal
+Arquivos principais com a lógica do sistema.
+
+Exemplo:
+
+* Carrinho
+* Visualização
+
+---
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Menu principal
 
 <p align="center">
   <img src="FOTOS/IMG_20260517_233023_165.jpg" width="700">
-</p>Tela inicial do sistema.
+</p>
+
+Tela inicial do sistema com as opções principais.
 
 ---
 
-⚙️ Informações do Sistema
+### ⚙️ Informações do sistema
 
 <p align="center">
   <img src="FOTOS/IMG_20260517_233115_603.jpg" width="700">
-</p>Visualização das configurações carregadas pelo sistema.
+</p>
+
+Visualização das configurações do sistema como moeda, idioma e informações gerais.
 
 ---
 
-🛒 Teste de Compra
+### 🛒 Teste de compra
 
 <p align="center">
   <img src="FOTOS/IMG_20260517_233121_024.jpg" width="700">
-</p>Adição de produtos utilizando código e quantidade.
+</p>
+
+Área para adicionar código do produto e quantidade desejada.
 
 ---
 
-📦 Produtos Disponíveis
+### 📦 Produtos disponíveis
 
 <p align="center">
   <img src="FOTOS/IMG_20260517_233127_445.jpg" width="700">
-</p>Lista completa de mercadorias cadastradas.
+</p>
+
+Lista de mercadorias cadastradas e seus respectivos códigos.
+
+---
+## 🎯 Objetivo do projeto
+
+Este projeto foi criado para aprendizado e prática em:
+
+* Python modular
+* Programação orientada a objetos
+* Manipulação de arquivos
+* Organização profissional de projetos
 
 ---
 
-👥 Comunidade
+## 👨‍💻 Autor
 
-Participe do grupo oficial do projeto no Telegram:
-
-🔗 [LINK DO GRUPO AQUI]
-
----
-
-🎯 Objetivo do projeto
-
-Este projeto foi criado com fins educacionais para aprimorar conhecimentos em:
-
-- Python Modular
-- Programação Orientada a Objetos (POO)
-- Manipulação de Arquivos JSON
-- Organização Profissional de Projetos
-- Interfaces em Terminal
-
----
-
-👨‍💻 Autor
-
-Desenvolvido por Erik
+Desenvolvido por **Erik**
 
 GitHub: https://github.com/ErikAndGabriel
-
----
-
-⭐ Se o projeto foi útil para você, considere deixar uma estrela no repositório.
+grupo telegram: 
