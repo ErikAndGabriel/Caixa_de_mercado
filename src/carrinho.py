@@ -1,4 +1,4 @@
-import json 
+8import json 
 from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
 from core.resetar import resetar_carrinho
@@ -51,12 +51,11 @@ class Carrinho:
         resetar_carrinho()  
         
     def cancelar_um_produto(self):
-        data = self.dados
-        for i in data.values():
-            if i == self.id:
-                self.total += int(i['valor'])
-            else:
-                return "produto não adicionado"
+        data = self.carrinho 
+        if i == self.id:
+            self.total -= int(i['valor'])
+        else:
+            return "produto não adicionado"
         remover_produto(self.id)
         return self.total
         
