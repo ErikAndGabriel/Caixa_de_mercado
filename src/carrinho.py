@@ -1,4 +1,4 @@
-8import json 
+import json 
 from core.carregar import carregar_carrinho, carregar_sql
 from core.adicionar import adicionar_carrinho
 from core.resetar import resetar_carrinho
