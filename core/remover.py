@@ -9,6 +9,6 @@ def remover_produto(id_produto):
         data = json.load(arq)
     id_produto = str(id_produto)
     if id_produto in data:
-        data[id_produto]['cancelamento'] == True
+        data[id_produto]['cancelamento'] = True
     with open(arquivo, "w") as arq:
         json.dump(data, arq, indent=4)
