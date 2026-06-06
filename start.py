@@ -4,6 +4,7 @@ from core.apagar import clear
 from core.carregar import carregar_config
 from ui.mensagens import mostrar_erro, pausar, reset_color
 from ui.banner import banner
+from ui.menus import menu_nova_compra, menu_inicial, menu_forma_de_pagamento
 from tabulate import tabulate
 import os
 
@@ -23,9 +24,7 @@ def NovoProduto():
                 while True:
                     clear()
                     try:
-                        print("[1] resetar compra")
-                        print("[2] resetar e sair")
-                        print("[3] remover produto")
+                        print(menu_nova_compra)
                         escolha = int(input("escolha: "))
                         
                         if escolha == 1:
@@ -79,11 +78,7 @@ def Menu():
         try:
             clear()
             print(banner)
-            reset_color()
-            print("[1] olhar produtos")
-            print("[2] nova compra")
-            print("[3] info")
-            print("[0] exit")
+            print(menu_inicial)
             escolha = int(input("\nescolha: "))
         
             if escolha == 1:
