@@ -18,9 +18,11 @@ def NovoProduto():
             print("""
             Atenção, adicionar codigo em seguida a quantidade, para menu de reset
             ou remover produto digitar (0 ou 00 ou 000....""")
+            print()
             print(10 * "=", "produtos", 10 * "=")
             carrinho.olhar_lista_carrinho()
-            print(29 * "=")
+            print(30 * "=")
+            print(f"Valor total: R$ {valor_total:.2f}")
             codigo = int(input("codigo: "))
             
             if codigo == 000:
@@ -66,11 +68,7 @@ def NovoProduto():
             continue
 
         valor = carrinho.Adicionar_no_carrinho_codigo()
-        carrinho.olhar_lista_carrinho()
         valor_total += valor
-        print(f"Valor total: R$ {valor_total:.2f}")
-        pausar()
-        continue
                 
 def Menu():
     while True:
