@@ -10,7 +10,7 @@ import os
 
 def NovoProduto():
     valor_total = 0
-    reset = Carrinho(None, None, None) 
+    carrinho = Carrinho(None, None, None) 
     while True:
         try:
             clear()
@@ -19,8 +19,8 @@ def NovoProduto():
             Atenção, adicionar codigo em seguida a quantidade, para menu de reset
             ou remover produto digitar (0 ou 00 ou 000....""")
             print(10 * "=", "produtos", 10 * "=")
-            reset.olhar_lista_carrinho()
-            prin(29 * "=")
+            carrinho.olhar_lista_carrinho()
+            print(29 * "=")
             codigo = int(input("codigo: "))
             
             if codigo == 000:
@@ -31,16 +31,16 @@ def NovoProduto():
                         escolha = int(input("escolha: "))
                         
                         if escolha == 1:
-                            reset.resetar_compra()
+                            carrinho.resetar_compra()
                             valor_total = 0
                             break
                         elif escolha == 2:
-                            reset.resetar_compra()
+                            carrinho.resetar_compra()
                             valor_total = 0
                             return  
                         elif escolha == 3:
                                
-                            reset.olhar_lista_carrinho()
+                            carrinho.olhar_lista_carrinho()
                             try:
                                 id_produto = int(input("ID para cancelar: "))
                                 remover = Carrinho(None, None, id_produto)
