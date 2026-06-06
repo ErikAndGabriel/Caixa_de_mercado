@@ -18,6 +18,9 @@ def NovoProduto():
             print("""
             Atenção, adicionar codigo em seguida a quantidade, para menu de reset
             ou remover produto digitar (0 ou 00 ou 000....""")
+            print(10 * "=", "produtos", 10 * "=")
+            reset.olhar_lista_carrinho()
+            prin(29 * "=")
             codigo = int(input("codigo: "))
             
             if codigo == 000:
