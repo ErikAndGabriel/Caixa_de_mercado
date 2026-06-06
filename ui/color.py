@@ -7,3 +7,8 @@ sucesso = Fore.GREEN
 aviso = Fore.BLUE
 pausa = Fore.YELLOW
 reset = Fore.RESET
+
+#======== coressssss =========
+
+ciano = Fore.CYAN
+branco = Fore.WHITE
