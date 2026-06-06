@@ -1,14 +1,15 @@
-menu_inicial = """
-[1] olhar produtos
-[2] nova compra
-[3] info
-[0] sair
+from ui.color import ciano, branco
+menu_inicial = f"""
+{ciano}[1] {branco}olhar produtos
+{ciano}[2] {branco}nova compra
+{ciano}[3] {branco}info
+{ciano}[0] {branco}sair
 """
 
-menu_nova_compra = """
-[1] resetar
-[2] resetar e sair
-[3] cancelar um item
+menu_nova_compra = f"""
+{ciano}[1] {branco}resetar
+{ciano}[2] {branco}resetar e sair
+{ciano}[3] {branco}cancelar um item
 """
 
 menu_forma_de_pagamento = """
