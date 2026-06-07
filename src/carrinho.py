@@ -12,6 +12,7 @@ class Carrinho:
         self.id = id
         self.dados = carregar_sql()
         self.carrinho = carregar_carrinho()
+        self.enumerar = 0
         self.total = 0
         
     def Adicionar_no_carrinho_codigo(self):
@@ -44,7 +45,8 @@ class Carrinho:
             return "o carrinho esta vazio!"
             
         for chave, valor in self.carrinho.items():
-            print(f"produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
+            self.enumerar += 1
+            print(f"{self.enumerar} produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
         
         
     def resetar_compra(self):
