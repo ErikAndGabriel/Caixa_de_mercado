@@ -54,8 +54,9 @@ class Carrinho:
         
     def cancelar_um_produto(self):
         data = self.carrinho 
-        if data == self.id:
-            self.total += int(i['valor'])
+        if self.id == data:
+            for i in data:
+                self.total += int(i['valor'])
         else:
             return "produto não adicionado"
         remover_produto(self.id)
