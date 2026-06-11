@@ -41,26 +41,29 @@ class Carrinho:
             return f"o codigo {self.codigo} não esta cadastrado!"
          
     def olhar_lista_carrinho(self):
-        if not self.carrinho:
-            return "o carrinho esta vazio!"
+        try:
+            if not self.carrinho:
+                return "o carrinho esta vazio!"
             
-        for chave, valor in self.carrinho.items():
-            self.enumerar += 1
-            print(f"{self.enumerar} produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
+            for chave, valor in self.carrinho.items():
+                self.enumerar += 1
+                print(f"{self.enumerar} produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
         
-        
+        except Exception as e:
+            return f"erro fatal: {e}"
     def resetar_compra(self):
         resetar_carrinho()  
         
     def cancelar_um_produto(self):
-        data = self.carrinho 
-        if self.id == data:
-            for i in data:
-                self.total += int(i['valor'])
-        else:
-            return "produto não adicionado"
-        remover_produto(self.id)
-        return self.total
-        
+        try:
+            data = self.carrinho 
+            if self.id == data:
+                self.id += data[self.id]['valor]
+            else:
+                return "produto não adicionado"
+            remover_produto(self.id)
+            return self.total
+        except Exception as e:
+            return f"erro fatal: {e}"
     def obter_dados(self):
         return self.dados
