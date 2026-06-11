@@ -47,8 +47,10 @@ class Carrinho:
             
             for chave, valor in self.carrinho.items():
                 self.enumerar += 1
-                print(f"{self.enumerar} produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
-        
+                if self.carrinho[self.id]['cancelamento'] == True:
+                    mostrar_erro(f"{self.enumerar} produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
+                else:
+                    mostrar_sucesso(f"{self.enumerar} produto : {valor['nome']} quantidade : {valor['quantidade']} valor : {valor['valor']}")
         except Exception as e:
             return f"erro fatal: {e}"
     def resetar_compra(self):
