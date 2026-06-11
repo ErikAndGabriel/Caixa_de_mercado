@@ -38,6 +38,17 @@ menu_admin_users = """
 [4] adicionar user
 [0] voltar
 """
+menu_pos_compra = """
+[1] adicionar cpf
+[2] continuar 
+[0] voltar
+"""
+
+menu_cpf = """
+[1] desconto
+[2] alimentação no cpf
+[0] voltar
+"""
 menu_forma_de_pagamento = """
 [1] dinheiro
 [2] pix
