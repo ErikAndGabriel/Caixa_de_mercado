@@ -58,7 +58,7 @@ class Carrinho:
         try:
     
             if self.id in self.carrinho:
-                self.total += self.carrinho[self.id]['valor]
+                self.total += self.carrinho[self.id]['valor']
             else:
                 return "produto não adicionado"
             remover_produto(self.id)
