@@ -1,7 +1,6 @@
 import json 
 from ui.color import erro, sucesso
 from core.carregar import carregar_sql 
-init()
 
 class Visualizar:
     def __init__(self, dados = carregar_sql()):
