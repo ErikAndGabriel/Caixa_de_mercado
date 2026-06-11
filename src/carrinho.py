@@ -47,7 +47,7 @@ class Carrinho:
             
             for chave, valor in self.carrinho.items():
                 self.enumerar += 1
-                if self.carrinho[self.id]['cancelamento'] == True:
+                if valor['cancelamento'] == True:
                     mostrar_erro(f"{self.enumerar} produto : {valor['nome']}  quantidade : {valor['quantidade']}  valor : {valor['valor']}")
                 else:
                     mostrar_sucesso(f"{self.enumerar} produto : {valor['nome']} quantidade : {valor['quantidade']} valor : {valor['valor']}")
